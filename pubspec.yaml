@@ -46,6 +46,8 @@ dependencies:
   freezed_annotation: ^3.0.0
   ##  https://pub.dev/packages/json_serializable
   json_serializable: ^6.9.4
+  ##  https://pub.dev/packages/json_annotation
+  json_annotation: ^4.9.0
 
 dev_dependencies:
   flutter_test:

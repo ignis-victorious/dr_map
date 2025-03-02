@@ -16,6 +16,7 @@ class DRMap extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedMapAssets = ref.watch(selectedMapAssetsProvider);
+    final allProvinces = ref.watch(provincesListProvider);
     return Stack(
       children: <Widget>[
         const Text('Inside DRMap stack'),
@@ -23,6 +24,18 @@ class DRMap extends ConsumerWidget {
         SvgPicture.asset('./assets/svgs/provinces/islabeata.svg'),
         SvgPicture.asset('./assets/svgs/provinces/islacatalina.svg'),
         SvgPicture.asset('./assets/svgs/provinces/islasaona.svg'),
+
+        //  Generate the list of provinces
+        ...List.generate(allProvinces.length, (index) {
+          final province = allProvinces[index];
+          return SvgPicture.asset(
+            './assets/svgs/provinces/${province.code}.svg',
+            colorFilter: ColorFilter.mode(
+              index == 0 ? Colors.red : Colors.white,
+              BlendMode.srcIn,
+            ),
+          );
+        }),
 
         ...List.generate(selectedMapAssets.length, (index) {
           final asset = selectedMapAssets[index];
