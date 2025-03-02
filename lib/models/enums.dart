@@ -5,4 +5,4 @@
 //  PROVIDERS
 //  _________________
 
-enum MapAsssets { seas, costalLine, rivers, lakes, borders, names }
+enum MapAssets { seas, coastalLine, rivers, lakes, borders, names }

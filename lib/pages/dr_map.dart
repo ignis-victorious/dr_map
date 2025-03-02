@@ -15,7 +15,6 @@ class DRMapApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFC6ECFF),
-      appBar: AppBar(title: const Text('DRMapApp')),
       // appBar: AppBar(title: const Text('DRMapApp')),
       body: Stack(
         children: <Widget>[
